@@ -1,0 +1,24 @@
+# Copy into .gitlab-ci.yml.  Needs a project access token with `api` scope in the masked variable GITLAB_TOKEN
+# (the job token cannot post commit statuses on merge requests).
+visual-regression:
+  stage: test
+  image: mcr.microsoft.com/playwright/python:v1.56.0-noble
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  variables:
+    PYTHONPATH: .
+    PIP_BREAK_SYSTEM_PACKAGES: "1"
+    VRT_BASE_URL: http://127.0.0.1:8080/v2
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq fonts-dejavu-core fonts-liberation >/dev/null
+    - pip install -q -r requirements.txt
+    - python -m http.server 8080 --directory examples/demo-site >/dev/null 2>&1 &
+    - sleep 2
+  script:
+    - python -m core test -c examples/vrt.config.yaml --report-dir vrt-report
+  artifacts:
+    when: always
+    expire_in: 14 days
+    paths: [vrt-report/]
+    reports:
+      junit: vrt-report/junit.xml

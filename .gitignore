@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.vrt/
+.vrt-demo/
+.loadtest-reports/
+test_dataset/data/
+results/.loadtest-reports/
+results/grid_calibration.npz

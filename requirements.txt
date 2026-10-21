@@ -1,0 +1,12 @@
+# runtime (pinned to the versions the results in results/ were produced with)
+numpy==2.5.3
+scipy==1.18.1
+pillow==12.3.0
+PyYAML==6.0.3
+playwright==1.56.0
+fastapi==0.150.0
+starlette==1.7.0
+uvicorn==0.54.0
+httpx==0.28.1
+python-multipart==0.0.32
+prometheus_client==0.26.0

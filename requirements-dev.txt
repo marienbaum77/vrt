@@ -1,0 +1,7 @@
+-r requirements.txt
+# experiments + tests
+matplotlib==3.11.2
+psutil==7.2.2
+scikit-learn==1.9.1
+scikit-image==0.26.0
+pytest==9.1.1

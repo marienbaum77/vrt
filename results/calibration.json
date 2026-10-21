@@ -1,0 +1,26 @@
+{
+  "n_pairs": 393,
+  "n_positive": 210,
+  "config": {
+    "radius_px": 1,
+    "blur_sigma_px": 2.0,
+    "blur_delta_e": 5.0,
+    "merge_px": 3,
+    "min_area_px": 8
+  },
+  "fail_pixels": 9.392304845413264,
+  "calibration": {
+    "fp_rate": 0.04371584699453552,
+    "fn_rate": 0.047619047619047616,
+    "auc": 0.9716367421285453
+  },
+  "cross_validation_5fold": {
+    "fp_rate_mean": 0.043560277127539085,
+    "fn_rate_mean": 0.057390515486000694,
+    "accuracy_mean": 0.9491398896462189,
+    "accuracy_sd": 0.021124891119653683
+  },
+  "grid_size": 600,
+  "configs_within_1pp_of_best": 9,
+  "objective": "minimax: minimise max(FP rate, FN rate) on the calibration split"
+}

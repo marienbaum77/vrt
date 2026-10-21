@@ -1,0 +1,63 @@
+name: visual-regression
+
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      approve:
+        description: "Replace baselines with the captures of this run (run on the PR branch, then commit)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  statuses: write        # commit status vrt/visual-regression
+  checks: write          # check run with the summary
+  pull-requests: write   # upserted PR comment
+
+jobs:
+  vrt:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+          sudo apt-get install -y --no-install-recommends fonts-dejavu-core fonts-liberation
+
+      - name: Serve the site under test
+        run: |
+          # replace with your own build/preview command; the demo serves examples/demo-site/v2
+          python -m http.server 8080 --directory examples/demo-site >/dev/null 2>&1 &
+          for i in $(seq 1 30); do curl -fs http://127.0.0.1:8080/v2/index.html >/dev/null && break; sleep 1; done
+
+      - name: Visual regression test
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VRT_BASE_URL: http://127.0.0.1:8080/v2
+          PYTHONPATH: .
+        run: python -m core test -c examples/vrt.config.yaml --report-dir vrt-report
+        # exit codes: 0 passed, 1 visual differences, 2 error (missing baseline / capture failure)
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vrt-report
+          path: vrt-report/
+          retention-days: 14
+
+      - name: Upload candidate captures (for baseline approval)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vrt-candidates
+          path: vrt-report/candidates/

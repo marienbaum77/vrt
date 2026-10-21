@@ -1,0 +1,251 @@
+{
+  "repeats": 5,
+  "variants": 4,
+  "modes": {
+    "naive": {
+      "per_kind": {
+        "animation": {
+          "n": 20,
+          "false_positives": 10,
+          "fp_rate": 0.5,
+          "ci": [
+            0.2992980081982123,
+            0.7007019918017877
+          ]
+        },
+        "delayed_content": {
+          "n": 20,
+          "false_positives": 0,
+          "fp_rate": 0.0,
+          "ci": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "slow_image": {
+          "n": 20,
+          "false_positives": 3,
+          "fp_rate": 0.15,
+          "ci": [
+            0.052368745896216595,
+            0.36041886474075696
+          ]
+        },
+        "clock": {
+          "n": 20,
+          "false_positives": 17,
+          "fp_rate": 0.85,
+          "ci": [
+            0.6395811352592431,
+            0.9476312541037835
+          ]
+        },
+        "live_value": {
+          "n": 20,
+          "false_positives": 20,
+          "fp_rate": 1.0,
+          "ci": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "n": 100,
+      "false_positives": 50,
+      "fp_rate": 0.5,
+      "ci": [
+        0.4038315303659956,
+        0.5961684696340044
+      ]
+    },
+    "stable": {
+      "per_kind": {
+        "animation": {
+          "n": 20,
+          "false_positives": 0,
+          "fp_rate": 0.0,
+          "ci": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "delayed_content": {
+          "n": 20,
+          "false_positives": 0,
+          "fp_rate": 0.0,
+          "ci": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "slow_image": {
+          "n": 20,
+          "false_positives": 0,
+          "fp_rate": 0.0,
+          "ci": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "clock": {
+          "n": 20,
+          "false_positives": 0,
+          "fp_rate": 0.0,
+          "ci": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "live_value": {
+          "n": 20,
+          "false_positives": 16,
+          "fp_rate": 0.8,
+          "ci": [
+            0.5839825677481064,
+            0.919342337420202
+          ]
+        }
+      },
+      "n": 100,
+      "false_positives": 16,
+      "fp_rate": 0.16,
+      "ci": [
+        0.10095288488804782,
+        0.24420269389270244
+      ]
+    },
+    "masked": {
+      "per_kind": {
+        "animation": {
+          "n": 20,
+          "false_positives": 0,
+          "fp_rate": 0.0,
+          "ci": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "delayed_content": {
+          "n": 20,
+          "false_positives": 0,
+          "fp_rate": 0.0,
+          "ci": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "slow_image": {
+          "n": 20,
+          "false_positives": 0,
+          "fp_rate": 0.0,
+          "ci": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "clock": {
+          "n": 20,
+          "false_positives": 0,
+          "fp_rate": 0.0,
+          "ci": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "live_value": {
+          "n": 20,
+          "false_positives": 0,
+          "fp_rate": 0.0,
+          "ci": [
+            0.0,
+            0.16112515805281938
+          ]
+        }
+      },
+      "n": 100,
+      "false_positives": 0,
+      "fp_rate": 0.0,
+      "ci": [
+        3.469446951953614e-18,
+        0.03699349820698568
+      ]
+    },
+    "auto": {
+      "per_kind": {
+        "animation": {
+          "n": 20,
+          "false_positives": 0,
+          "fp_rate": 0.0,
+          "ci": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "delayed_content": {
+          "n": 20,
+          "false_positives": 0,
+          "fp_rate": 0.0,
+          "ci": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "slow_image": {
+          "n": 20,
+          "false_positives": 0,
+          "fp_rate": 0.0,
+          "ci": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "clock": {
+          "n": 20,
+          "false_positives": 0,
+          "fp_rate": 0.0,
+          "ci": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "live_value": {
+          "n": 20,
+          "false_positives": 5,
+          "fp_rate": 0.25,
+          "ci": [
+            0.11186170140766569,
+            0.468700877618744
+          ]
+        }
+      },
+      "n": 100,
+      "false_positives": 5,
+      "fp_rate": 0.05,
+      "ci": [
+        0.02154367915436796,
+        0.11175046923191913
+      ]
+    }
+  },
+  "regression_control": {
+    "masked": {
+      "n": 20,
+      "detected": 20,
+      "recall": 1.0,
+      "ci": [
+        0.8388748419471806,
+        1.0
+      ]
+    },
+    "stable": {
+      "n": 20,
+      "detected": 20,
+      "recall": 1.0,
+      "ci": [
+        0.8388748419471806,
+        1.0
+      ]
+    }
+  },
+  "runtime_s": 584.6
+}

@@ -1,0 +1,98 @@
+# HELP vrt_diff_time_ms Wall time of one image comparison (ms)
+# TYPE vrt_diff_time_ms histogram
+vrt_diff_time_ms_bucket{algorithm="vrt_calibrated",le="10.0"} 0.0
+vrt_diff_time_ms_bucket{algorithm="vrt_calibrated",le="25.0"} 0.0
+vrt_diff_time_ms_bucket{algorithm="vrt_calibrated",le="50.0"} 0.0
+vrt_diff_time_ms_bucket{algorithm="vrt_calibrated",le="100.0"} 0.0
+vrt_diff_time_ms_bucket{algorithm="vrt_calibrated",le="200.0"} 0.0
+vrt_diff_time_ms_bucket{algorithm="vrt_calibrated",le="400.0"} 271.0
+vrt_diff_time_ms_bucket{algorithm="vrt_calibrated",le="800.0"} 605.0
+vrt_diff_time_ms_bucket{algorithm="vrt_calibrated",le="1600.0"} 707.0
+vrt_diff_time_ms_bucket{algorithm="vrt_calibrated",le="3200.0"} 720.0
+vrt_diff_time_ms_bucket{algorithm="vrt_calibrated",le="6400.0"} 720.0
+vrt_diff_time_ms_bucket{algorithm="vrt_calibrated",le="12800.0"} 720.0
+vrt_diff_time_ms_bucket{algorithm="vrt_calibrated",le="+Inf"} 720.0
+vrt_diff_time_ms_count{algorithm="vrt_calibrated"} 720.0
+vrt_diff_time_ms_sum{algorithm="vrt_calibrated"} 409660.76699999924
+# HELP vrt_diff_time_ms_created Wall time of one image comparison (ms)
+# TYPE vrt_diff_time_ms_created gauge
+vrt_diff_time_ms_created{algorithm="vrt_calibrated"} 1.7925689807168195e+09
+# HELP vrt_memory_peak_mb Peak traced memory of one comparison (MB)
+# TYPE vrt_memory_peak_mb histogram
+# HELP vrt_false_positive_rate False positive rate on labelled data
+# TYPE vrt_false_positive_rate gauge
+vrt_false_positive_rate{algorithm="pixel_exact",split="test"} 0.3162393162393162
+vrt_false_positive_rate{algorithm="pixel_color",split="test"} 0.3076923076923077
+vrt_false_positive_rate{algorithm="pixel_geometry",split="test"} 0.1794871794871795
+vrt_false_positive_rate{algorithm="pixel_blur",split="test"} 0.05982905982905983
+vrt_false_positive_rate{algorithm="pixel_tolerant",split="test"} 0.05128205128205128
+vrt_false_positive_rate{algorithm="psnr",split="test"} 0.28205128205128205
+vrt_false_positive_rate{algorithm="ssim_mean",split="test"} 0.26495726495726496
+vrt_false_positive_rate{algorithm="ssim_low",split="test"} 0.3076923076923077
+vrt_false_positive_rate{algorithm="phash",split="test"} 0.02564102564102564
+vrt_false_positive_rate{algorithm="vrt_calibrated",split="holdout"} 0.1111111111111111
+# HELP vrt_false_negative_rate False negative rate on labelled data
+# TYPE vrt_false_negative_rate gauge
+vrt_false_negative_rate{algorithm="pixel_exact",split="test"} 0.76
+vrt_false_negative_rate{algorithm="pixel_color",split="test"} 0.5466666666666666
+vrt_false_negative_rate{algorithm="pixel_geometry",split="test"} 0.4666666666666667
+vrt_false_negative_rate{algorithm="pixel_blur",split="test"} 0.04
+vrt_false_negative_rate{algorithm="pixel_tolerant",split="test"} 0.04
+vrt_false_negative_rate{algorithm="psnr",split="test"} 0.37333333333333335
+vrt_false_negative_rate{algorithm="ssim_mean",split="test"} 0.5266666666666666
+vrt_false_negative_rate{algorithm="ssim_low",split="test"} 0.30666666666666664
+vrt_false_negative_rate{algorithm="phash",split="test"} 0.7266666666666667
+vrt_false_negative_rate{algorithm="vrt_calibrated",split="holdout"} 0.022222222222222223
+# HELP vrt_threshold_sensitivity Share of verdicts flipping when a parameter changes by +10%
+# TYPE vrt_threshold_sensitivity gauge
+vrt_threshold_sensitivity{parameter="color_delta_e"} 0.0
+vrt_threshold_sensitivity{parameter="blur_sigma_px"} 0.02247191011235955
+vrt_threshold_sensitivity{parameter="blur_delta_e"} 0.0149812734082397
+vrt_threshold_sensitivity{parameter="radius_px"} 0.0599250936329588
+vrt_threshold_sensitivity{parameter="merge_px"} 0.0
+vrt_threshold_sensitivity{parameter="min_area_px"} 0.0
+vrt_threshold_sensitivity{parameter="fail_pixels"} 0.0
+# HELP vrt_comparisons_total Comparisons by result
+# TYPE vrt_comparisons_total counter
+vrt_comparisons_total{result="passed"} 327.0
+vrt_comparisons_total{result="failed"} 393.0
+# HELP vrt_comparisons_created Comparisons by result
+# TYPE vrt_comparisons_created gauge
+vrt_comparisons_created{result="passed"} 1.7925689807168021e+09
+vrt_comparisons_created{result="failed"} 1.7925689807168581e+09
+# HELP vrt_capture_time_ms Screenshot capture time (ms)
+# TYPE vrt_capture_time_ms histogram
+vrt_capture_time_ms_bucket{le="10.0"} 0.0
+vrt_capture_time_ms_bucket{le="25.0"} 0.0
+vrt_capture_time_ms_bucket{le="50.0"} 0.0
+vrt_capture_time_ms_bucket{le="100.0"} 0.0
+vrt_capture_time_ms_bucket{le="200.0"} 0.0
+vrt_capture_time_ms_bucket{le="400.0"} 0.0
+vrt_capture_time_ms_bucket{le="800.0"} 0.0
+vrt_capture_time_ms_bucket{le="1600.0"} 0.0
+vrt_capture_time_ms_bucket{le="3200.0"} 0.0
+vrt_capture_time_ms_bucket{le="6400.0"} 0.0
+vrt_capture_time_ms_bucket{le="12800.0"} 0.0
+vrt_capture_time_ms_bucket{le="+Inf"} 0.0
+vrt_capture_time_ms_count 0.0
+vrt_capture_time_ms_sum 0.0
+# HELP vrt_capture_time_ms_created Screenshot capture time (ms)
+# TYPE vrt_capture_time_ms_created gauge
+vrt_capture_time_ms_created 1.7925689807164307e+09
+# HELP vrt_capture_total Captures by outcome
+# TYPE vrt_capture_total counter
+# HELP vrt_diff_pixels Significant pixels per comparison
+# TYPE vrt_diff_pixels histogram
+vrt_diff_pixels_bucket{le="0.0"} 325.0
+vrt_diff_pixels_bucket{le="10.0"} 327.0
+vrt_diff_pixels_bucket{le="100.0"} 392.0
+vrt_diff_pixels_bucket{le="1000.0"} 593.0
+vrt_diff_pixels_bucket{le="10000.0"} 691.0
+vrt_diff_pixels_bucket{le="100000.0"} 718.0
+vrt_diff_pixels_bucket{le="1e+06"} 720.0
+vrt_diff_pixels_bucket{le="+Inf"} 720.0
+vrt_diff_pixels_count 720.0
+vrt_diff_pixels_sum 1.569822e+06
+# HELP vrt_diff_pixels_created Significant pixels per comparison
+# TYPE vrt_diff_pixels_created gauge
+vrt_diff_pixels_created 1.7925689807165008e+09

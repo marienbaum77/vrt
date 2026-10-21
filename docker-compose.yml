@@ -1,0 +1,68 @@
+# Whole stand:  docker compose up -d --build
+#   demo-site   two versions of a small site: /v1 (baseline) and /v2 (contains deliberate regressions)
+#   mock-ci     mock GitHub/GitLab API with a branch-protection merge gate
+#   vrt-api     comparison API, webhook receiver, report storage, Prometheus /metrics
+#   prometheus  scrapes vrt-api
+#   runner      one-shot VRT run (profile "run"), see `make docker-demo`
+x-vrt: &vrt
+  build: .
+  image: vrt:latest
+  environment: &vrt-env
+    VRT_WEBHOOK_SECRET: ${VRT_WEBHOOK_SECRET:-change-me}
+    GITHUB_TOKEN: mock-token
+    VRT_PUBLIC_URL: ${VRT_PUBLIC_URL:-http://localhost:8000}
+
+services:
+  demo-site:
+    image: nginx:1.27-alpine
+    volumes:
+      - ./examples/demo-site:/usr/share/nginx/html:ro
+    ports: ["8080:80"]
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/v1/index.html"]
+      interval: 5s
+      retries: 10
+
+  mock-ci:
+    <<: *vrt
+    command: ["vrt", "mock-ci", "--host", "0.0.0.0", "--port", "9000"]
+    ports: ["9000:9000"]
+
+  vrt-api:
+    <<: *vrt
+    ports: ["8000:8000"]
+    volumes:
+      - vrt-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/healthz"]
+      interval: 10s
+      retries: 6
+    depends_on: [mock-ci]
+
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    volumes:
+      - ./docker/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports: ["9090:9090"]
+    depends_on: [vrt-api]
+
+  runner:
+    <<: *vrt
+    profiles: ["run"]
+    environment:
+      <<: *vrt-env
+      VRT_BASE_URL: ${VRT_BASE_URL:-http://demo-site/v1}
+      VRT_CI_PROVIDER: github
+      VRT_CI_API_URL: http://mock-ci:9000
+      VRT_REPO: acme/site
+      VRT_SHA: 0123456789abcdef0123456789abcdef01234567
+      VRT_PR: "7"
+    volumes:
+      - vrt-data:/data
+    depends_on:
+      demo-site: {condition: service_healthy}
+      mock-ci: {condition: service_started}
+    command: ["vrt", "test", "-c", "examples/vrt.docker.yaml"]
+
+volumes:
+  vrt-data:

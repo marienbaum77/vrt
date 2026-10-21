@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vrt"
+version = "1.0.0"
+description = "Visual regression testing: stable capture, tolerant pixel-diff (CIEDE2000, anti-aliasing, SSIM), reports, CI/CD integration, metrics"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=2.0", "scipy>=1.11", "pillow>=10", "pyyaml>=6", "playwright>=1.45",
+  "fastapi>=0.110", "uvicorn>=0.27", "httpx>=0.26", "python-multipart>=0.0.9", "prometheus-client>=0.19",
+]
+
+[project.optional-dependencies]
+experiments = ["matplotlib>=3.8", "scikit-learn>=1.3", "scikit-image>=0.22", "psutil>=5.9"]
+dev = ["pytest>=8", "scikit-learn>=1.3", "scikit-image>=0.22", "psutil>=5.9"]
+
+[project.scripts]
+vrt = "core.cli:main"
+
+# The repository layout mirrors the brief: /core /capture /diff-engine /ci-adapter /metrics /test-dataset.
+# Python packages cannot contain hyphens, so the directories are named with underscores.
+[tool.setuptools]
+packages = ["core", "capture", "diff_engine", "ci_adapter", "metrics", "test_dataset", "experiments"]
+
+[tool.pytest.ini_options]
+pythonpath = [".", "tests"]
+testpaths = ["tests"]
+addopts = "-q"

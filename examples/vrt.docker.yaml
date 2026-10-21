@@ -1,0 +1,34 @@
+# Config used by the `runner` service of docker-compose.yml
+version: 1
+name: acme-demo
+base_url: ${VRT_BASE_URL:-http://demo-site/v1}
+baseline_dir: /data/baselines
+output_dir: /data/report
+on_missing_baseline: fail
+
+capture:
+  browsers: [chromium]
+  viewports:
+    - {name: desktop, width: 1280, height: 720}
+    - {name: mobile, width: 390, height: 844}
+
+diff:
+  profile: balanced
+
+scenarios:
+  - name: home
+    path: /index.html
+    mask_selectors: ["[data-vrt-ignore]"]
+  - name: pricing
+    path: /pricing.html
+    mask_selectors: ["[data-vrt-ignore]"]
+    viewports: [desktop]
+
+ci:
+  provider: github
+  api_url: http://mock-ci:9000
+  context: vrt/visual-regression
+  comment: true
+metrics:
+  prometheus_file: metrics.prom
+  json_file: metrics.json

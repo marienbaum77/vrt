@@ -1,0 +1,115 @@
+{
+  "resolution": [
+    {
+      "width": 640,
+      "height": 360,
+      "megapixels": 0.23,
+      "median_ms": 93.089,
+      "min_ms": 92.696,
+      "peak_traced_mb": 29.6,
+      "verdict": "failed",
+      "rss_highwater_mb": 144.9
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "megapixels": 0.92,
+      "median_ms": 321.324,
+      "min_ms": 300.572,
+      "peak_traced_mb": 116.6,
+      "verdict": "failed",
+      "rss_highwater_mb": 240.0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "megapixels": 2.07,
+      "median_ms": 736.702,
+      "min_ms": 719.075,
+      "peak_traced_mb": 261.6,
+      "verdict": "failed",
+      "rss_highwater_mb": 399.7
+    },
+    {
+      "width": 1920,
+      "height": 2160,
+      "megapixels": 4.15,
+      "median_ms": 1638.569,
+      "min_ms": 1423.182,
+      "peak_traced_mb": 522.7,
+      "verdict": "failed",
+      "rss_highwater_mb": 686.5
+    },
+    {
+      "width": 1920,
+      "height": 4320,
+      "megapixels": 8.29,
+      "median_ms": 3319.001,
+      "min_ms": 3229.847,
+      "peak_traced_mb": 1044.7,
+      "verdict": "failed",
+      "rss_highwater_mb": 1238.2
+    }
+  ],
+  "service": {
+    "payload": "1280x720 PNG pair, calibrated profile",
+    "cpu_count": 2,
+    "levels": [
+      {
+        "concurrency": 1,
+        "requests": 48,
+        "errors": 0,
+        "rps": 5.98,
+        "p50_ms": 155.1,
+        "p95_ms": 208.5,
+        "p99_ms": 236.4,
+        "server_rss_max_mb": 149.6
+      },
+      {
+        "concurrency": 2,
+        "requests": 48,
+        "errors": 0,
+        "rps": 10.84,
+        "p50_ms": 171.9,
+        "p95_ms": 211.3,
+        "p99_ms": 223.7,
+        "server_rss_max_mb": 175.1
+      },
+      {
+        "concurrency": 4,
+        "requests": 48,
+        "errors": 0,
+        "rps": 10.73,
+        "p50_ms": 370.1,
+        "p95_ms": 458.8,
+        "p99_ms": 483.3,
+        "server_rss_max_mb": 223.9
+      },
+      {
+        "concurrency": 8,
+        "requests": 48,
+        "errors": 0,
+        "rps": 10.72,
+        "p50_ms": 693.7,
+        "p95_ms": 906.0,
+        "p99_ms": 965.3,
+        "server_rss_max_mb": 298.0
+      },
+      {
+        "concurrency": 16,
+        "requests": 48,
+        "errors": 0,
+        "rps": 10.01,
+        "p50_ms": 1498.7,
+        "p95_ms": 1890.0,
+        "p99_ms": 1899.0,
+        "server_rss_max_mb": 498.1
+      }
+    ],
+    "metrics_endpoint_has_vrt_series": true
+  },
+  "machine": {
+    "cpus": 2,
+    "python": "3.13.16"
+  }
+}
