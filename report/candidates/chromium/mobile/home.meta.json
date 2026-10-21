@@ -1,0 +1,55 @@
+{
+  "name": "home",
+  "url": "http://demo-site/v2/index.html",
+  "browser": "chromium",
+  "browser_version": "141.0.7390.37",
+  "viewport": [
+    390,
+    844
+  ],
+  "device_scale_factor": 1.0,
+  "full_page": false,
+  "image_size": [
+    390,
+    844
+  ],
+  "stable": true,
+  "frames_taken": 3,
+  "images": {
+    "images": 0,
+    "pending": 0,
+    "backgrounds": 0
+  },
+  "regions": [
+    {
+      "selector": "[data-vrt-ignore]",
+      "index": 0,
+      "x": 326.06,
+      "y": 20.5,
+      "w": 67.38,
+      "h": 18.0
+    },
+    {
+      "selector": "[data-vrt-ignore]",
+      "index": 1,
+      "x": 417.44,
+      "y": 22.5,
+      "w": 6.0,
+      "h": 14.0
+    },
+    {
+      "selector": "[data-vrt-ignore]",
+      "index": 2,
+      "x": 32.0,
+      "y": 510.0,
+      "w": 326.0,
+      "h": 70.0
+    }
+  ],
+  "timings_ms": {
+    "navigate": 537.1,
+    "stabilise": 47.6,
+    "screenshot": 249.4
+  },
+  "captured_at": "2026-10-21T13:07:13+00:00"
+}

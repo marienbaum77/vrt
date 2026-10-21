@@ -1,0 +1,188 @@
+{
+  "passed": false,
+  "width": 390,
+  "height": 844,
+  "compared_pixels": 301308,
+  "ignored_pixels": 27852,
+  "size_mismatch": false,
+  "baseline_size": [
+    390,
+    844
+  ],
+  "candidate_size": [
+    390,
+    844
+  ],
+  "raw_diff_pixels": 32756,
+  "color_diff_pixels": 29394,
+  "geometry_diff_pixels": 28638,
+  "blur_diff_pixels": 25871,
+  "diff_pixels": 25871,
+  "diff_ratio": 0.0858623070081113,
+  "max_delta_e": 80.63233465898276,
+  "mean_delta_e": 44.82396372599009,
+  "regions": [
+    {
+      "x": 212,
+      "y": 399,
+      "w": 98,
+      "h": 44,
+      "area": 4251,
+      "max_delta_e": 65.903
+    },
+    {
+      "x": 53,
+      "y": 399,
+      "w": 97,
+      "h": 44,
+      "area": 4206,
+      "max_delta_e": 65.143
+    },
+    {
+      "x": 31,
+      "y": 189,
+      "w": 259,
+      "h": 39,
+      "area": 3768,
+      "max_delta_e": 52.234
+    },
+    {
+      "x": 128,
+      "y": 98,
+      "w": 116,
+      "h": 32,
+      "area": 1743,
+      "max_delta_e": 79.429
+    },
+    {
+      "x": 31,
+      "y": 139,
+      "w": 106,
+      "h": 31,
+      "area": 1637,
+      "max_delta_e": 79.435
+    },
+    {
+      "x": 212,
+      "y": 350,
+      "w": 88,
+      "h": 36,
+      "area": 1335,
+      "max_delta_e": 79.494
+    },
+    {
+      "x": 33,
+      "y": 98,
+      "w": 83,
+      "h": 39,
+      "area": 1312,
+      "max_delta_e": 79.596
+    },
+    {
+      "x": 255,
+      "y": 98,
+      "w": 81,
+      "h": 32,
+      "area": 1246,
+      "max_delta_e": 79.696
+    },
+    {
+      "x": 53,
+      "y": 350,
+      "w": 60,
+      "h": 39,
+      "area": 1141,
+      "max_delta_e": 80.61
+    },
+    {
+      "x": 372,
+      "y": 399,
+      "w": 18,
+      "h": 62,
+      "area": 1098,
+      "max_delta_e": 50.678
+    },
+    {
+      "x": 214,
+      "y": 304,
+      "w": 56,
+      "h": 32,
+      "area": 1002,
+      "max_delta_e": 80.632
+    },
+    {
+      "x": 53,
+      "y": 275,
+      "w": 71,
+      "h": 19,
+      "area": 870,
+      "max_delta_e": 79.423
+    },
+    {
+      "x": 54,
+      "y": 304,
+      "w": 37,
+      "h": 32,
+      "area": 679,
+      "max_delta_e": 80.088
+    },
+    {
+      "x": 211,
+      "y": 275,
+      "w": 53,
+      "h": 19,
+      "area": 657,
+      "max_delta_e": 80.325
+    },
+    {
+      "x": 371,
+      "y": 350,
+      "w": 19,
+      "h": 39,
+      "area": 360,
+      "max_delta_e": 79.037
+    },
+    {
+      "x": 373,
+      "y": 304,
+      "w": 17,
+      "h": 32,
+      "area": 332,
+      "max_delta_e": 80.325
+    },
+    {
+      "x": 372,
+      "y": 275,
+      "w": 18,
+      "h": 19,
+      "area": 234,
+      "max_delta_e": 79.423
+    }
+  ],
+  "reasons": [
+    "25871 significant pixels >= fail_pixels=10"
+  ],
+  "ssim": null,
+  "ssim_p01": null,
+  "psnr": null,
+  "phash_distance": null,
+  "timings_ms": {
+    "load": 6.92,
+    "prepare": 4.496,
+    "exact_diff": 4.178,
+    "color": 11.15,
+    "geometry": 61.227,
+    "antialiasing": 19.334,
+    "regions": 4.824
+  },
+  "diff_time_ms": 112.286,
+  "fast_failed": false,
+  "page": "home.chromium.mobile",
+  "page_id": "home@chromium/mobile",
+  "files": {
+    "baseline": "home.chromium.mobile.baseline.png",
+    "candidate": "home.chromium.mobile.candidate.png",
+    "overlay": "home.chromium.mobile.overlay.png",
+    "side_by_side": "home.chromium.mobile.side_by_side.png"
+  }
+}

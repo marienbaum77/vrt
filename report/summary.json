@@ -1,0 +1,649 @@
+{
+  "schema": "vrt.summary/1",
+  "project": "acme-demo",
+  "config": "examples/vrt.docker.yaml",
+  "generated_at": "2026-10-21T13:07:15Z",
+  "verdict": "failed",
+  "exit_code": 1,
+  "total": 3,
+  "passed": 0,
+  "failed": 3,
+  "missing_baseline": 0,
+  "errors": 0,
+  "profile": "balanced",
+  "thresholds": {
+    "color": {
+      "metric": "ciede2000",
+      "delta_e": 2.3
+    },
+    "geometry": {
+      "radius_px": 1,
+      "delta_e": null,
+      "blend": true
+    },
+    "antialiasing": {
+      "blur_sigma_px": 2.0,
+      "delta_e": 5.0
+    },
+    "alpha": {
+      "tolerance": 8
+    },
+    "regions": {
+      "min_area_px": 8,
+      "merge_px": 3
+    },
+    "decision": {
+      "fail_pixels": 10,
+      "fail_ratio": null,
+      "ssim_min": null
+    },
+    "mask_padding_px": 2,
+    "size_policy": "fail",
+    "fast_fail_ratio": 0.35,
+    "extras": []
+  },
+  "timing": {
+    "capture_ms": 3133.8,
+    "diff_ms": 459.3,
+    "wall_s": 4.44
+  },
+  "pages": [
+    {
+      "page": "home@chromium/desktop",
+      "scenario": "home",
+      "browser": "chromium",
+      "viewport": "desktop",
+      "files": {
+        "candidate": "pages/home.chromium.desktop.candidate.png",
+        "baseline": "pages/home.chromium.desktop.baseline.png",
+        "overlay": "pages/home.chromium.desktop.overlay.png",
+        "side_by_side": "pages/home.chromium.desktop.side_by_side.png",
+        "json": "pages/home.chromium.desktop.json"
+      },
+      "capture": {
+        "stable": true,
+        "frames_taken": 3,
+        "timings_ms": {
+          "navigate": 550.0,
+          "stabilise": 53.1,
+          "screenshot": 321.6
+        },
+        "browser_version": "141.0.7390.37",
+        "image_size": [
+          1280,
+          720
+        ]
+      },
+      "passed": false,
+      "width": 1280,
+      "height": 720,
+      "compared_pixels": 844008,
+      "ignored_pixels": 77592,
+      "size_mismatch": false,
+      "baseline_size": [
+        1280,
+        720
+      ],
+      "candidate_size": [
+        1280,
+        720
+      ],
+      "raw_diff_pixels": 47617,
+      "color_diff_pixels": 38454,
+      "geometry_diff_pixels": 37592,
+      "blur_diff_pixels": 32398,
+      "diff_pixels": 32398,
+      "diff_ratio": 0.03838589207685235,
+      "max_delta_e": 81.07365004832498,
+      "mean_delta_e": 44.83848596136099,
+      "regions": [
+        {
+          "x": 830,
+          "y": 323,
+          "w": 127,
+          "h": 44,
+          "area": 5512,
+          "max_delta_e": 65.329
+        },
+        {
+          "x": 193,
+          "y": 323,
+          "w": 97,
+          "h": 44,
+          "area": 4206,
+          "max_delta_e": 65.143
+        },
+        {
+          "x": 512,
+          "y": 323,
+          "w": 97,
+          "h": 44,
+          "area": 4204,
+          "max_delta_e": 64.708
+        },
+        {
+          "x": 171,
+          "y": 149,
+          "w": 416,
+          "h": 21,
+          "area": 3828,
+          "max_delta_e": 52.234
+        },
+        {
+          "x": 268,
+          "y": 98,
+          "w": 116,
+          "h": 32,
+          "area": 1743,
+          "max_delta_e": 79.429
+        },
+        {
+          "x": 489,
+          "y": 99,
+          "w": 105,
+          "h": 31,
+          "area": 1636,
+          "max_delta_e": 79.696
+        },
+        {
+          "x": 512,
+          "y": 292,
+          "w": 140,
+          "h": 21,
+          "area": 1377,
+          "max_delta_e": 81.074
+        },
+        {
+          "x": 173,
+          "y": 98,
+          "w": 83,
+          "h": 39,
+          "area": 1312,
+          "max_delta_e": 79.596
+        },
+        {
+          "x": 831,
+          "y": 292,
+          "w": 129,
+          "h": 21,
+          "area": 1286,
+          "max_delta_e": 79.037
+        },
+        {
+          "x": 395,
+          "y": 98,
+          "w": 81,
+          "h": 32,
+          "area": 1246,
+          "max_delta_e": 79.696
+        },
+        {
+          "x": 193,
+          "y": 292,
+          "w": 124,
+          "h": 21,
+          "area": 1162,
+          "max_delta_e": 81.074
+        },
+        {
+          "x": 513,
+          "y": 246,
+          "w": 57,
+          "h": 32,
+          "area": 1021,
+          "max_delta_e": 80.632
+        },
+        {
+          "x": 831,
+          "y": 246,
+          "w": 57,
+          "h": 32,
+          "area": 1021,
+          "max_delta_e": 80.088
+        },
+        {
+          "x": 193,
+          "y": 217,
+          "w": 71,
+          "h": 19,
+          "area": 870,
+          "max_delta_e": 79.423
+        },
+        {
+          "x": 194,
+          "y": 246,
+          "w": 37,
+          "h": 32,
+          "area": 679,
+          "max_delta_e": 80.088
+        },
+        {
+          "x": 511,
+          "y": 217,
+          "w": 52,
+          "h": 19,
+          "area": 667,
+          "max_delta_e": 80.61
+        },
+        {
+          "x": 830,
+          "y": 216,
+          "w": 53,
+          "h": 20,
+          "area": 628,
+          "max_delta_e": 80.61
+        }
+      ],
+      "reasons": [
+        "32398 significant pixels >= fail_pixels=10"
+      ],
+      "ssim": null,
+      "ssim_p01": null,
+      "psnr": null,
+      "phash_distance": null,
+      "timings_ms": {
+        "load": 25.069,
+        "prepare": 17.713,
+        "exact_diff": 11.602,
+        "color": 20.514,
+        "geometry": 78.932,
+        "antialiasing": 34.937,
+        "regions": 11.668
+      },
+      "diff_time_ms": 200.773,
+      "fast_failed": false,
+      "status": "failed",
+      "memory_peak_mb": 37.133,
+      "ignored_regions": 6
+    },
+    {
+      "page": "home@chromium/mobile",
+      "scenario": "home",
+      "browser": "chromium",
+      "viewport": "mobile",
+      "files": {
+        "candidate": "pages/home.chromium.mobile.candidate.png",
+        "baseline": "pages/home.chromium.mobile.baseline.png",
+        "overlay": "pages/home.chromium.mobile.overlay.png",
+        "side_by_side": "pages/home.chromium.mobile.side_by_side.png",
+        "json": "pages/home.chromium.mobile.json"
+      },
+      "capture": {
+        "stable": true,
+        "frames_taken": 3,
+        "timings_ms": {
+          "navigate": 537.1,
+          "stabilise": 47.6,
+          "screenshot": 249.4
+        },
+        "browser_version": "141.0.7390.37",
+        "image_size": [
+          390,
+          844
+        ]
+      },
+      "passed": false,
+      "width": 390,
+      "height": 844,
+      "compared_pixels": 301308,
+      "ignored_pixels": 27852,
+      "size_mismatch": false,
+      "baseline_size": [
+        390,
+        844
+      ],
+      "candidate_size": [
+        390,
+        844
+      ],
+      "raw_diff_pixels": 32756,
+      "color_diff_pixels": 29394,
+      "geometry_diff_pixels": 28638,
+      "blur_diff_pixels": 25871,
+      "diff_pixels": 25871,
+      "diff_ratio": 0.0858623070081113,
+      "max_delta_e": 80.63233465898276,
+      "mean_delta_e": 44.82396372599009,
+      "regions": [
+        {
+          "x": 212,
+          "y": 399,
+          "w": 98,
+          "h": 44,
+          "area": 4251,
+          "max_delta_e": 65.903
+        },
+        {
+          "x": 53,
+          "y": 399,
+          "w": 97,
+          "h": 44,
+          "area": 4206,
+          "max_delta_e": 65.143
+        },
+        {
+          "x": 31,
+          "y": 189,
+          "w": 259,
+          "h": 39,
+          "area": 3768,
+          "max_delta_e": 52.234
+        },
+        {
+          "x": 128,
+          "y": 98,
+          "w": 116,
+          "h": 32,
+          "area": 1743,
+          "max_delta_e": 79.429
+        },
+        {
+          "x": 31,
+          "y": 139,
+          "w": 106,
+          "h": 31,
+          "area": 1637,
+          "max_delta_e": 79.435
+        },
+        {
+          "x": 212,
+          "y": 350,
+          "w": 88,
+          "h": 36,
+          "area": 1335,
+          "max_delta_e": 79.494
+        },
+        {
+          "x": 33,
+          "y": 98,
+          "w": 83,
+          "h": 39,
+          "area": 1312,
+          "max_delta_e": 79.596
+        },
+        {
+          "x": 255,
+          "y": 98,
+          "w": 81,
+          "h": 32,
+          "area": 1246,
+          "max_delta_e": 79.696
+        },
+        {
+          "x": 53,
+          "y": 350,
+          "w": 60,
+          "h": 39,
+          "area": 1141,
+          "max_delta_e": 80.61
+        },
+        {
+          "x": 372,
+          "y": 399,
+          "w": 18,
+          "h": 62,
+          "area": 1098,
+          "max_delta_e": 50.678
+        },
+        {
+          "x": 214,
+          "y": 304,
+          "w": 56,
+          "h": 32,
+          "area": 1002,
+          "max_delta_e": 80.632
+        },
+        {
+          "x": 53,
+          "y": 275,
+          "w": 71,
+          "h": 19,
+          "area": 870,
+          "max_delta_e": 79.423
+        },
+        {
+          "x": 54,
+          "y": 304,
+          "w": 37,
+          "h": 32,
+          "area": 679,
+          "max_delta_e": 80.088
+        },
+        {
+          "x": 211,
+          "y": 275,
+          "w": 53,
+          "h": 19,
+          "area": 657,
+          "max_delta_e": 80.325
+        },
+        {
+          "x": 371,
+          "y": 350,
+          "w": 19,
+          "h": 39,
+          "area": 360,
+          "max_delta_e": 79.037
+        },
+        {
+          "x": 373,
+          "y": 304,
+          "w": 17,
+          "h": 32,
+          "area": 332,
+          "max_delta_e": 80.325
+        },
+        {
+          "x": 372,
+          "y": 275,
+          "w": 18,
+          "h": 19,
+          "area": 234,
+          "max_delta_e": 79.423
+        }
+      ],
+      "reasons": [
+        "25871 significant pixels >= fail_pixels=10"
+      ],
+      "ssim": null,
+      "ssim_p01": null,
+      "psnr": null,
+      "phash_distance": null,
+      "timings_ms": {
+        "load": 6.92,
+        "prepare": 4.496,
+        "exact_diff": 4.178,
+        "color": 11.15,
+        "geometry": 61.227,
+        "antialiasing": 19.334,
+        "regions": 4.824
+      },
+      "diff_time_ms": 112.286,
+      "fast_failed": false,
+      "status": "failed",
+      "memory_peak_mb": 20.588,
+      "ignored_regions": 6
+    },
+    {
+      "page": "pricing@chromium/desktop",
+      "scenario": "pricing",
+      "browser": "chromium",
+      "viewport": "desktop",
+      "files": {
+        "candidate": "pages/pricing.chromium.desktop.candidate.png",
+        "baseline": "pages/pricing.chromium.desktop.baseline.png",
+        "overlay": "pages/pricing.chromium.desktop.overlay.png",
+        "side_by_side": "pages/pricing.chromium.desktop.side_by_side.png",
+        "json": "pages/pricing.chromium.desktop.json"
+      },
+      "capture": {
+        "stable": true,
+        "frames_taken": 3,
+        "timings_ms": {
+          "navigate": 542.0,
+          "stabilise": 67.5,
+          "screenshot": 312.8
+        },
+        "browser_version": "141.0.7390.37",
+        "image_size": [
+          1280,
+          720
+        ]
+      },
+      "passed": false,
+      "width": 1280,
+      "height": 720,
+      "compared_pixels": 844008,
+      "ignored_pixels": 77592,
+      "size_mismatch": false,
+      "baseline_size": [
+        1280,
+        720
+      ],
+      "candidate_size": [
+        1280,
+        720
+      ],
+      "raw_diff_pixels": 37455,
+      "color_diff_pixels": 28161,
+      "geometry_diff_pixels": 27596,
+      "blur_diff_pixels": 22974,
+      "diff_pixels": 22974,
+      "diff_ratio": 0.027220121136292547,
+      "max_delta_e": 81.2760112352021,
+      "mean_delta_e": 45.94069781532651,
+      "regions": [
+        {
+          "x": 193,
+          "y": 323,
+          "w": 120,
+          "h": 44,
+          "area": 5205,
+          "max_delta_e": 65.329
+        },
+        {
+          "x": 671,
+          "y": 323,
+          "w": 120,
+          "h": 44,
+          "area": 5205,
+          "max_delta_e": 65.329
+        },
+        {
+          "x": 173,
+          "y": 98,
+          "w": 129,
+          "h": 39,
+          "area": 1906,
+          "max_delta_e": 79.596
+        },
+        {
+          "x": 316,
+          "y": 98,
+          "w": 130,
+          "h": 39,
+          "area": 1883,
+          "max_delta_e": 79.007
+        },
+        {
+          "x": 172,
+          "y": 149,
+          "w": 159,
+          "h": 21,
+          "area": 1400,
+          "max_delta_e": 53.669
+        },
+        {
+          "x": 672,
+          "y": 246,
+          "w": 77,
+          "h": 32,
+          "area": 1287,
+          "max_delta_e": 80.632
+        },
+        {
+          "x": 670,
+          "y": 292,
+          "w": 125,
+          "h": 18,
+          "area": 1182,
+          "max_delta_e": 81.074
+        },
+        {
+          "x": 338,
+          "y": 149,
+          "w": 125,
+          "h": 21,
+          "area": 1091,
+          "max_delta_e": 50.668
+        },
+        {
+          "x": 193,
+          "y": 292,
+          "w": 109,
+          "h": 21,
+          "area": 1059,
+          "max_delta_e": 80.61
+        },
+        {
+          "x": 193,
+          "y": 216,
+          "w": 81,
+          "h": 24,
+          "area": 1035,
+          "max_delta_e": 81.276
+        },
+        {
+          "x": 194,
+          "y": 246,
+          "w": 56,
+          "h": 32,
+          "area": 926,
+          "max_delta_e": 80.632
+        },
+        {
+          "x": 670,
+          "y": 216,
+          "w": 63,
+          "h": 24,
+          "area": 795,
+          "max_delta_e": 80.325
+        }
+      ],
+      "reasons": [
+        "22974 significant pixels >= fail_pixels=10"
+      ],
+      "ssim": null,
+      "ssim_p01": null,
+      "psnr": null,
+      "phash_distance": null,
+      "timings_ms": {
+        "load": 17.419,
+        "prepare": 13.11,
+        "exact_diff": 12.428,
+        "color": 12.778,
+        "geometry": 51.621,
+        "antialiasing": 28.815,
+        "regions": 9.712
+      },
+      "diff_time_ms": 146.243,
+      "fast_failed": false,
+      "status": "failed",
+      "memory_peak_mb": 33.325,
+      "ignored_regions": 6
+    }
+  ],
+  "consistency": [],
+  "ci": [
+    {
+      "reporter": "github",
+      "ok": true,
+      "status": "failure",
+      "check_run": 13,
+      "comment": {
+        "id": 4,
+        "updated": true
+      }
+    }
+  ]
+}

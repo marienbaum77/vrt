@@ -7,3 +7,6 @@ __pycache__/
 test_dataset/data/
 results/.loadtest-reports/
 results/grid_calibration.npz
+
+screencast_media/
+

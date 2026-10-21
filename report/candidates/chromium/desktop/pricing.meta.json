@@ -1,0 +1,55 @@
+{
+  "name": "pricing",
+  "url": "http://demo-site/v2/pricing.html",
+  "browser": "chromium",
+  "browser_version": "141.0.7390.37",
+  "viewport": [
+    1280,
+    720
+  ],
+  "device_scale_factor": 1.0,
+  "full_page": false,
+  "image_size": [
+    1280,
+    720
+  ],
+  "stable": true,
+  "frames_taken": 3,
+  "images": {
+    "images": 0,
+    "pending": 0,
+    "backgrounds": 0
+  },
+  "regions": [
+    {
+      "selector": "[data-vrt-ignore]",
+      "index": 0,
+      "x": 1120.0,
+      "y": 20.5,
+      "w": 90.0,
+      "h": 18.0
+    },
+    {
+      "selector": "[data-vrt-ignore]",
+      "index": 1,
+      "x": 1234.0,
+      "y": 22.5,
+      "w": 14.0,
+      "h": 14.0
+    },
+    {
+      "selector": "[data-vrt-ignore]",
+      "index": 2,
+      "x": 172.0,
+      "y": 416.0,
+      "w": 936.0,
+      "h": 70.0
+    }
+  ],
+  "timings_ms": {
+    "navigate": 542.0,
+    "stabilise": 67.5,
+    "screenshot": 312.8
+  },
+  "captured_at": "2026-10-21T13:07:14+00:00"
+}

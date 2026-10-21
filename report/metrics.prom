@@ -1,0 +1,89 @@
+# HELP vrt_diff_time_ms Wall time of one image comparison (ms)
+# TYPE vrt_diff_time_ms histogram
+vrt_diff_time_ms_bucket{algorithm="vrt",le="10.0"} 0.0
+vrt_diff_time_ms_bucket{algorithm="vrt",le="25.0"} 0.0
+vrt_diff_time_ms_bucket{algorithm="vrt",le="50.0"} 0.0
+vrt_diff_time_ms_bucket{algorithm="vrt",le="100.0"} 0.0
+vrt_diff_time_ms_bucket{algorithm="vrt",le="200.0"} 2.0
+vrt_diff_time_ms_bucket{algorithm="vrt",le="400.0"} 3.0
+vrt_diff_time_ms_bucket{algorithm="vrt",le="800.0"} 3.0
+vrt_diff_time_ms_bucket{algorithm="vrt",le="1600.0"} 3.0
+vrt_diff_time_ms_bucket{algorithm="vrt",le="3200.0"} 3.0
+vrt_diff_time_ms_bucket{algorithm="vrt",le="6400.0"} 3.0
+vrt_diff_time_ms_bucket{algorithm="vrt",le="12800.0"} 3.0
+vrt_diff_time_ms_bucket{algorithm="vrt",le="+Inf"} 3.0
+vrt_diff_time_ms_count{algorithm="vrt"} 3.0
+vrt_diff_time_ms_sum{algorithm="vrt"} 459.30199999999996
+# HELP vrt_diff_time_ms_created Wall time of one image comparison (ms)
+# TYPE vrt_diff_time_ms_created gauge
+vrt_diff_time_ms_created{algorithm="vrt"} 1.7925880350578332e+09
+# HELP vrt_memory_peak_mb Peak traced memory of one comparison (MB)
+# TYPE vrt_memory_peak_mb histogram
+vrt_memory_peak_mb_bucket{algorithm="vrt",le="4.0"} 0.0
+vrt_memory_peak_mb_bucket{algorithm="vrt",le="8.0"} 0.0
+vrt_memory_peak_mb_bucket{algorithm="vrt",le="16.0"} 0.0
+vrt_memory_peak_mb_bucket{algorithm="vrt",le="32.0"} 1.0
+vrt_memory_peak_mb_bucket{algorithm="vrt",le="64.0"} 3.0
+vrt_memory_peak_mb_bucket{algorithm="vrt",le="128.0"} 3.0
+vrt_memory_peak_mb_bucket{algorithm="vrt",le="256.0"} 3.0
+vrt_memory_peak_mb_bucket{algorithm="vrt",le="512.0"} 3.0
+vrt_memory_peak_mb_bucket{algorithm="vrt",le="1024.0"} 3.0
+vrt_memory_peak_mb_bucket{algorithm="vrt",le="2048.0"} 3.0
+vrt_memory_peak_mb_bucket{algorithm="vrt",le="+Inf"} 3.0
+vrt_memory_peak_mb_count{algorithm="vrt"} 3.0
+vrt_memory_peak_mb_sum{algorithm="vrt"} 91.04602909088135
+# HELP vrt_memory_peak_mb_created Peak traced memory of one comparison (MB)
+# TYPE vrt_memory_peak_mb_created gauge
+vrt_memory_peak_mb_created{algorithm="vrt"} 1.7925880350578637e+09
+# HELP vrt_false_positive_rate False positive rate on labelled data
+# TYPE vrt_false_positive_rate gauge
+# HELP vrt_false_negative_rate False negative rate on labelled data
+# TYPE vrt_false_negative_rate gauge
+# HELP vrt_threshold_sensitivity Share of verdicts flipping when a parameter changes by +10%
+# TYPE vrt_threshold_sensitivity gauge
+# HELP vrt_comparisons_total Comparisons by result
+# TYPE vrt_comparisons_total counter
+vrt_comparisons_total{result="failed"} 3.0
+# HELP vrt_comparisons_created Comparisons by result
+# TYPE vrt_comparisons_created gauge
+vrt_comparisons_created{result="failed"} 1.7925880350578122e+09
+# HELP vrt_capture_time_ms Screenshot capture time (ms)
+# TYPE vrt_capture_time_ms histogram
+vrt_capture_time_ms_bucket{le="10.0"} 0.0
+vrt_capture_time_ms_bucket{le="25.0"} 0.0
+vrt_capture_time_ms_bucket{le="50.0"} 0.0
+vrt_capture_time_ms_bucket{le="100.0"} 0.0
+vrt_capture_time_ms_bucket{le="200.0"} 0.0
+vrt_capture_time_ms_bucket{le="400.0"} 0.0
+vrt_capture_time_ms_bucket{le="800.0"} 0.0
+vrt_capture_time_ms_bucket{le="1600.0"} 3.0
+vrt_capture_time_ms_bucket{le="3200.0"} 3.0
+vrt_capture_time_ms_bucket{le="6400.0"} 3.0
+vrt_capture_time_ms_bucket{le="12800.0"} 3.0
+vrt_capture_time_ms_bucket{le="+Inf"} 3.0
+vrt_capture_time_ms_count 3.0
+vrt_capture_time_ms_sum 2718.6426250000295
+# HELP vrt_capture_time_ms_created Screenshot capture time (ms)
+# TYPE vrt_capture_time_ms_created gauge
+vrt_capture_time_ms_created 1.7925880315082881e+09
+# HELP vrt_capture_total Captures by outcome
+# TYPE vrt_capture_total counter
+vrt_capture_total{outcome="stable"} 3.0
+# HELP vrt_capture_created Captures by outcome
+# TYPE vrt_capture_created gauge
+vrt_capture_created{outcome="stable"} 1.7925880328069038e+09
+# HELP vrt_diff_pixels Significant pixels per comparison
+# TYPE vrt_diff_pixels histogram
+vrt_diff_pixels_bucket{le="0.0"} 0.0
+vrt_diff_pixels_bucket{le="10.0"} 0.0
+vrt_diff_pixels_bucket{le="100.0"} 0.0
+vrt_diff_pixels_bucket{le="1000.0"} 0.0
+vrt_diff_pixels_bucket{le="10000.0"} 0.0
+vrt_diff_pixels_bucket{le="100000.0"} 3.0
+vrt_diff_pixels_bucket{le="1e+06"} 3.0
+vrt_diff_pixels_bucket{le="+Inf"} 3.0
+vrt_diff_pixels_count 3.0
+vrt_diff_pixels_sum 81243.0
+# HELP vrt_diff_pixels_created Significant pixels per comparison
+# TYPE vrt_diff_pixels_created gauge
+vrt_diff_pixels_created 1.7925880315083225e+09

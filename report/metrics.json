@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-10-21T13:07:15Z",
+  "diff_time_ms": {
+    "count": 3,
+    "mean": 153.101,
+    "p50": 146.243,
+    "p95": 195.32,
+    "p99": 199.682,
+    "max": 200.773
+  },
+  "memory_peak_mb": {
+    "count": 3,
+    "mean": 30.349,
+    "p50": 33.325,
+    "p95": 36.752,
+    "p99": 37.057,
+    "max": 37.133
+  },
+  "capture_time_ms": {
+    "count": 3,
+    "mean": 906.214,
+    "p50": 934.801,
+    "p95": 939.959,
+    "p99": 940.417,
+    "max": 940.532
+  },
+  "false_positive_rate": {},
+  "false_negative_rate": {},
+  "threshold_sensitivity": {}
+}
